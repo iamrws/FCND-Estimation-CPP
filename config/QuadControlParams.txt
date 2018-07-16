@@ -3,13 +3,12 @@
 # Namespace and parameter names are not case-sensitive
 # X=Y sets X to Y. Y may be a string, float, or list of 3 floats
 ############################################################################
-
-[QuadControlParams] 
+[QuadControlParams]
 
 UseIdealEstimator=1
 
 # Physical properties
-Mass = 0.5
+Mass = 0.4865
 L = 0.17
 Ixx = 0.0023
 Iyy = 0.0023
@@ -18,21 +17,44 @@ kappa = 0.016
 minMotorThrust = .1
 maxMotorThrust = 4.5
 
+#### Udacity DEFAULTS
 # Position control gains
-kpPosXY = 2
-kpPosZ = 2
-KiPosZ = 50
+#kpPosXY = 2
+#kpPosZ = 2
+#KiPosZ = 50
 
 # Velocity control gains
-kpVelXY = 8
-kpVelZ = 8
+#kpVelXY = 8
+#kpVelZ = 8
 
 # Angle control gains
-kpBank = 12
+#kpBank = 12
+#kpYaw = 3
+### Udacity DEFAULTS
+
+### MY REVISED STEP 6
+# Position control gains
+kpPosXY = 4
+
+# Scenerio 4, KiPosZ= 18.1
+# Scenerio 5, KiPosZ= 7.54
+kpPosZ = 4
+
+# Scenario 5, Scenario 11 KiPosZ = 7.53
+KiPosZ = 5 #Step 6
+
+# Velocity control gains
+
+kpVelXY = 3 # Post detune
+kpVelZ = 4 # Post detune
+
+# Angle control gains
+kpBank = 6
 kpYaw = 3
 
 # Angle rate gains
-kpPQR = 70, 70, 15
+kpPQR = 83, 83, 4
+### MY REVISED
 
 # limits
 maxAscentRate = 5
@@ -40,3 +62,5 @@ maxDescentRate = 2
 maxSpeedXY = 5
 maxHorizAccel = 12
 maxTiltAngle = .7
+
+
